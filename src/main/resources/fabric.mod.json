@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "bug-fixer-upper",
+	"version": "${version}",
+	"name": "BugFixerUpper",
+	"description": "BugFixerUpper fixes a few critical and non-critical bugs in the game.",
+	"authors": [
+		"2No2Name"
+	],
+	"contact": {
+		"homepage": "https://github.com/2No2Name/bug-fixer-upper",
+		"sources": "https://github.com/2No2Name/bug-fixer-upper"
+	},
+	"license": "LGPL-3.0-only",
+	"icon": "assets/bug-fixer-upper/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"no2.bugfixerupper.BugFixerUpper"
+		],
+		"client": [
+			"no2.bugfixerupper.BugFixerUpperClient"
+		]
+	},
+	"mixins": [
+		"bug-fixer-upper.mixins.json",
+		{
+			"config": "bug-fixer-upper.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+
+	}
+}

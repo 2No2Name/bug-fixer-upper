@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "no2.bugfixerupper.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "chunkload.item_frame_sound.ItemFrameMixin",
+    "chunkload.passenger_mount_event.EntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+	}
+}
