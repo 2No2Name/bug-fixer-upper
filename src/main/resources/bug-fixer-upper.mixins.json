@@ -4,7 +4,8 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "chunkload.item_frame_sound.ItemFrameMixin",
-    "chunkload.passenger_mount_event.EntityMixin"
+    "chunkload.passenger_mount_event.EntityMixin",
+    "chunkload.passenger_mount_event.EntityTypeMixin"
   ],
   "injectors": {
     "defaultRequire": 1

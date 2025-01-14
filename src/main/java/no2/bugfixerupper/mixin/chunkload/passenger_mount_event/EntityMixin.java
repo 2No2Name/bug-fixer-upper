@@ -5,6 +5,7 @@ import net.minecraft.core.Holder;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.entity.EntityInLevelCallback;
 import net.minecraft.world.level.gameevent.GameEvent;
+import no2.bugfixerupper.common.threadlocals.MountEventSilencer;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -19,9 +20,7 @@ public class EntityMixin {
             method = "addPassenger(Lnet/minecraft/world/entity/Entity;)V",
             at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/Entity;gameEvent(Lnet/minecraft/core/Holder;Lnet/minecraft/world/entity/Entity;)V")
     )
-    private boolean isEntityPartOfWorld(Entity thisInstance, Holder<GameEvent> holder, @Nullable Entity passenger) {
-        return this.levelCallback != null; // True if entity is part of the world
-        //If the vehicle is part of the world, mounting it should emit a game event. Otherwise, we are
-        // probably loading the chunk with entities, or something similar, and we should not emit the event.
+    private boolean shouldEmitMountEvent(Entity thisInstance, Holder<GameEvent> holder, @Nullable Entity passenger) {
+        return !MountEventSilencer.isMountEventSilenced();
     }
 }
