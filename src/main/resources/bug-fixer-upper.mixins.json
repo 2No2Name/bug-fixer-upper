@@ -6,6 +6,7 @@
     "chunkload.item_frame_sound.ItemFrameMixin",
     "chunkload.passenger_mount_event.EntityMixin",
     "chunkload.passenger_mount_event.EntityTypeMixin",
+    "structureblocks.hangingentities.StructureTemplateMixin",
     "structureblocks.paintings.StructureTemplateMixin"
   ],
   "injectors": {
