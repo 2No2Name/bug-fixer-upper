@@ -5,7 +5,8 @@
   "mixins": [
     "chunkload.item_frame_sound.ItemFrameMixin",
     "chunkload.passenger_mount_event.EntityMixin",
-    "chunkload.passenger_mount_event.EntityTypeMixin"
+    "chunkload.passenger_mount_event.EntityTypeMixin",
+    "structureblocks.paintings.StructureTemplateMixin"
   ],
   "injectors": {
     "defaultRequire": 1

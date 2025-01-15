@@ -7,7 +7,8 @@ BugFixerUpper is a Minecraft mod that fixes a few critical and non-critical bugs
 ## Features
 
 - Prevent passenger entities from sending game events during chunk loading / generation causing deadlocks.
-- Prevent item frames to send sounds and events from chunk loading / generation.
+- Prevent item frames from sending sounds and events when chunk loading / generation.
+- Structure blocks load paintings at the correct position (Thanks to BluSpring).
 - Whatever you suggest in the issue tracker.
 
 ## Installation
