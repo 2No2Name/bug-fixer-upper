@@ -13,11 +13,11 @@ BugFixerUpper is a Minecraft mod that fixes a few critical and non-critical bugs
 
 ## Features (Creative Mode)
 ### Structure blocks
-- Structure blocks load paintings at the correct position (Thanks to BluSpring).
+- Structure blocks load paintings at the correct position (Thanks to BluSpring) (MC-102223).
 - Structure blocks with combined mirror and rotation place paintings and item frames with the correct rotation.
 
 ### Tick freeze
-- Prevent player unfreezing other passengers in multi-seat vehicle during tick freeze
+- Prevent player unfreezing other passengers in multi-seat vehicle during tick freeze (MC-268358)
 
 ## Installation
 
