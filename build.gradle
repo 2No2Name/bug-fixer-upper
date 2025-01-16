@@ -102,7 +102,7 @@ publishMods {
 
 	// CurseForge options used by both Fabric and Forge
 	def cfOptions = curseforgeOptions {
-		accessToken = providers.environmentVariable("CURSEFORGE_TOKEN")
+		accessToken = providers.environmentVariable("CURSEFORGE_API_KEY")
 		projectId = "1179548"
 
 		if (project.hasProperty('minecraft_version_range_start') && project.hasProperty('minecraft_version_range_end')) {
@@ -119,7 +119,7 @@ publishMods {
 
 	// Modrinth options used by both Fabric and Forge
 	def mrOptions = modrinthOptions {
-		accessToken = providers.environmentVariable("MODRINTH_TOKEN")
+		accessToken = providers.environmentVariable("MODRINTH_API_KEY")
 		projectId = "gRMQvlnJ"
 
 
