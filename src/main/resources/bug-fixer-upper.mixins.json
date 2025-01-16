@@ -7,6 +7,7 @@
     "chunkload.passenger_mount_event.EntityMixin",
     "chunkload.passenger_mount_event.EntityTypeMixin",
     "misc.parrot_mob_spawner.ParrotMixin",
+    "misc.vanishing_curse_horse_chest.AbstractHorseMixin",
     "saving.entity.passenger_position.EntityMixin",
     "structureblocks.hangingentities.StructureTemplateMixin",
     "structureblocks.paintings.StructureTemplateMixin",
