@@ -99,6 +99,8 @@ publishMods {
 	def fabric_mod_version = mod_version + "-fabric"
 	def fabric_suffix = "for Fabric"
 	def displayNamePrefix = project.property('mod_name').toString()
+	def cfDisplayNamePrefix = displayNamePrefix + " " + mod_version
+	def mrDisplayNamePrefix = displayNamePrefix + " " + project.property('minecraft_version').toString()
 
 	// CurseForge options used by both Fabric and Forge
 	def cfOptions = curseforgeOptions {
@@ -113,8 +115,6 @@ publishMods {
 		} else {
 			minecraftVersions.add(project.property('minecraft_version').toString())
 		}
-
-		displayNamePrefix = displayNamePrefix + " " + mod_version
 	}
 
 	// Modrinth options used by both Fabric and Forge
@@ -131,9 +131,6 @@ publishMods {
 		} else {
 			minecraftVersions.add(project.property('minecraft_version').toString())
 		}
-
-		displayNamePrefix = displayNamePrefix + " " + project.property('minecraft_version').toString()
-
 	}
 
 	// Fabric specific options for CurseForge
@@ -142,7 +139,7 @@ publishMods {
 		modLoaders.add("fabric")
 		modLoaders.add("quilt")
 		version = fabric_mod_version
-		displayName = displayNamePrefix + " " + fabric_suffix
+		displayName = cfDisplayNamePrefix + " " + fabric_suffix
 	}
 
 	// Fabric specific options for Modrinth
@@ -151,7 +148,7 @@ publishMods {
 		modLoaders.add("fabric")
 		modLoaders.add("quilt")
 		version = fabric_mod_version
-		displayName = displayNamePrefix + " " + fabric_suffix
+		displayName = mrDisplayNamePrefix + " " + fabric_suffix
 	}
 }
 
