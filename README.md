@@ -13,6 +13,7 @@ BugFixerUpper is a Minecraft mod that fixes a few critical and non-critical bugs
 
 ### Misc
 - Save vehicle passengers at their actual position (MC-263030)
+- Parrot mob spawner blocks treat all air types equally (MC-232359)
 
 ## Features (Creative Mode)
 ### Structure blocks
