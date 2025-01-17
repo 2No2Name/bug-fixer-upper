@@ -16,7 +16,6 @@ BugFixerUpper is a Minecraft mod that fixes a few critical and non-critical bugs
 - Parrot mob spawner blocks treat all air types equally (MC-232359).
 - Curse of vanishing does not apply to items inside donkey/mule/llama chest slots.
 
-## Features (Creative Mode)
 ### Structure blocks
 - Structure blocks load paintings at the correct position (Thanks to BluSpring) (MC-102223).
 - Structure blocks with combined mirror and rotation place paintings and item frames with the correct rotation.
