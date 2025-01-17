@@ -100,7 +100,7 @@ publishMods {
 	def fabric_suffix = "for Fabric"
 	def displayNamePrefix = project.property('mod_name').toString()
 	def cfDisplayNamePrefix = displayNamePrefix + " " + mod_version
-	def mrDisplayNamePrefix = displayNamePrefix + " " + project.property('minecraft_version').toString()
+	def mrDisplayNamePrefix = displayNamePrefix + " " + project.property('mod_version').toString()
 
 	// CurseForge options used by both Fabric and Forge
 	def cfOptions = curseforgeOptions {
