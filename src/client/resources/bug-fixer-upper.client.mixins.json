@@ -1,10 +1,13 @@
 {
-	"required": true,
-	"package": "no2.bugfixerupper.mixin.client",
-	"compatibilityLevel": "JAVA_21",
-	"client": [
-	],
-	"injectors": {
-		"defaultRequire": 1
-	}
+  "required": true,
+  "package": "no2.bugfixerupper.mixin.client",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+    "misc.leashed_player_vehicle.EntityMixin"
+  ]
 }

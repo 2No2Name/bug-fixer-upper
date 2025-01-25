@@ -15,6 +15,7 @@ BugFixerUpper is a Minecraft mod that fixes a few critical and non-critical bugs
 - Save vehicle passengers at their actual position (MC-263030).
 - Parrot mob spawner blocks treat all air types equally (MC-232359).
 - Curse of vanishing does not apply to items inside donkey/mule/llama chest slots.
+- Leads pull on mobs and boats that the player is riding
 
 ### Structure blocks
 - Structure blocks load paintings at the correct position (Thanks to BluSpring) (MC-102223).
