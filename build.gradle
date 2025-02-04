@@ -168,3 +168,36 @@ def getReleaseType() {
 			return ReleaseType.STABLE
 	}
 }
+
+
+tasks.register("printMinecraftVersion") {
+	doLast {
+		println project.minecraft_version
+	}
+}
+
+tasks.register("printMinMinecraftVersion") {
+	doLast {
+		if (project.hasProperty('minecraft_version_range_start')) {
+			println project.minecraft_version_range_start
+		} else {
+			println project.minecraft_version
+		}
+	}
+}
+
+tasks.register("printMaxMinecraftVersion") {
+	doLast {
+		if (project.hasProperty('minecraft_version_range_end')) {
+			println project.minecraft_version_range_end
+		} else {
+			println project.minecraft_version
+		}
+	}
+}
+
+tasks.register("printModVersion") {
+	doLast {
+		println project.mod_version
+	}
+}

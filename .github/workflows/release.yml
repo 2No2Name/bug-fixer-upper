@@ -46,6 +46,37 @@ jobs:
       - name: make gradle wrapper executable
         run: chmod +x ./gradlew
 
+      - name: Set environment variables
+        run: |
+          echo "MINECRAFT_VERSION=$(./gradlew -q printMinecraftVersion)" >> $GITHUB_ENV
+          echo "MOD_VERSION=$(./gradlew -q printModVersion)" >> $GITHUB_ENV
+          echo "MIN_MINECRAFT_VERSION=$(./gradlew -q printMinMinecraftVersion)" >> $GITHUB_ENV
+          echo "MAX_MINECRAFT_VERSION=$(./gradlew -q printMaxMinecraftVersion)" >> $GITHUB_ENV 
+          echo "RELEASE_NAME=BugFixerUpper $MOD_VERSION" >> $GITHUB_ENV
+          echo "RELEASE_TAG=$MOD_VERSION" >> $GITHUB_ENV
+
+
+      - name: Replace placeholders in CHANGELOG.md
+        run: |
+          sed -i 's/_ReleaseTag_/${{ env.RELEASE_TAG }}/g' CHANGELOG.md
+          sed -i 's/_MCVersion_/${{ env.MINECRAFT_VERSION }}/g' CHANGELOG.md
+          sed -i 's/_ModVersion_/${{ env.MOD_VERSION }}/g' CHANGELOG.md     
+          sed -i 's/_MinMCVersion_/${{ env.MIN_MINECRAFT_VERSION }}/g' CHANGELOG.md
+          sed -i 's/_MaxMCVersion_/${{ env.MAX_MINECRAFT_VERSION }}/g' CHANGELOG.md
+
+      - name: Create GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create ${{ env.RELEASE_TAG }} \
+            --title="${{ env.RELEASE_NAME }}" \
+            --notes-file=CHANGELOG.md \
+            --target=${{ github.ref_name }} \
+            --draft=false \
+            --prerelease=${{ inputs.releaseType != 'stable' }} \
+            build/libs/*.jar
+
+
       - name: Build & Publish
         env:
           RELEASE_TYPE: ${{ inputs.releaseType }}
