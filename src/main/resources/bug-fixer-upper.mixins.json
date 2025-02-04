@@ -6,6 +6,7 @@
     "chunkload.item_frame_sound.ItemFrameMixin",
     "chunkload.passenger_mount_event.EntityMixin",
     "chunkload.passenger_mount_event.EntityTypeMixin",
+    "misc.exit_end_portal_torches.EndPodiumFeatureMixin",
     "misc.parrot_mob_spawner.ParrotMixin",
     "misc.vanishing_curse_horse_chest.AbstractHorseMixin",
     "saving.entity.passenger_position.EntityMixin",
