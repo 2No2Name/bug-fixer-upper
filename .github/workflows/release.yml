@@ -46,6 +46,11 @@ jobs:
       - name: make gradle wrapper executable
         run: chmod +x ./gradlew
 
+      - name: Gradle Release Build
+        env:
+          RELEASE_TYPE: ${{ inputs.releaseType }}
+        run: ./gradlew build
+
       - name: Set environment variables
         run: |
           echo "MINECRAFT_VERSION=$(./gradlew -q printMinecraftVersion)" >> $GITHUB_ENV
@@ -74,7 +79,6 @@ jobs:
             --draft=false \
             --prerelease=${{ inputs.releaseType != 'stable' }} \
             build/libs/*.jar
-
 
       - name: Build & Publish
         env:
