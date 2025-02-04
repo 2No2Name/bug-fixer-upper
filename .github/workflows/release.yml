@@ -51,10 +51,9 @@ jobs:
           echo "MINECRAFT_VERSION=$(./gradlew -q printMinecraftVersion)" >> $GITHUB_ENV
           echo "MOD_VERSION=$(./gradlew -q printModVersion)" >> $GITHUB_ENV
           echo "MIN_MINECRAFT_VERSION=$(./gradlew -q printMinMinecraftVersion)" >> $GITHUB_ENV
-          echo "MAX_MINECRAFT_VERSION=$(./gradlew -q printMaxMinecraftVersion)" >> $GITHUB_ENV 
-          echo "RELEASE_NAME=BugFixerUpper $MOD_VERSION" >> $GITHUB_ENV
-          echo "RELEASE_TAG=$MOD_VERSION" >> $GITHUB_ENV
-
+          echo "MAX_MINECRAFT_VERSION=$(./gradlew -q printMaxMinecraftVersion)" >> $GITHUB_ENV
+          echo "RELEASE_NAME=BugFixerUpper $(./gradlew -q printModVersion)" >> $GITHUB_ENV
+          echo "RELEASE_TAG=$(./gradlew -q printModVersion)" >> $GITHUB_ENV
 
       - name: Replace placeholders in CHANGELOG.md
         run: |
