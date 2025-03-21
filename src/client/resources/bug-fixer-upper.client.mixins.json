@@ -8,6 +8,7 @@
     "defaultRequire": 1
   },
   "mixins": [
+    "misc.clickable_projectile_size.ProjectileUtilMixin",
     "misc.leashed_player_vehicle.EntityMixin"
   ]
 }
