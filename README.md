@@ -29,7 +29,7 @@ BugFixerUpper is a Minecraft mod that fixes a few critical and non-critical bugs
 ## Installation
 
 Must be installed on the server to work in multiplayer. For usage in singleplayer worlds, the mod has to be installed on the client.
-1. Download the mod from [Modrinth](https://modrinth.com/mod/bug-fixer-upper) or [CurseForge](https://www.curseforge.com/minecraft/mc-mods/bug-fixer-upper).
+1. Download the mod from [Modrinth](https://modrinth.com/mod/bugfixerupper) or [CurseForge](https://www.curseforge.com/minecraft/mc-mods/bugfixerupper).
 2. Place the downloaded `.jar` file into the `mods` folder of your Minecraft directory.
 3. Launch Minecraft with the Fabric mod loader.
 
