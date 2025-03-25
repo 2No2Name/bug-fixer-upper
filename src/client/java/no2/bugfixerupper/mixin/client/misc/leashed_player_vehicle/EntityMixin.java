@@ -16,17 +16,17 @@ public abstract class EntityMixin {
 
     @Shadow public abstract Level level();
 
-    @Shadow public abstract boolean isControlledByLocalInstance();
-
     @Shadow public abstract float distanceTo(Entity entity);
 
     @Shadow public abstract boolean onGround();
+
+    @Shadow public abstract boolean isLocalInstanceAuthoritative();
 
     @Inject(
             method = "baseTick", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/profiling/ProfilerFiller;pop()V")
     )
     private <E extends Entity & Leashable> void clientSideLeashTickIfNeeded(CallbackInfo ci) {
-        if (this.level().isClientSide() && this.isControlledByLocalInstance() && this instanceof Leashable) {
+        if (this.level().isClientSide() && this.isLocalInstanceAuthoritative() && this instanceof Leashable) {
             this.clientLeashTick();
         }
     }
