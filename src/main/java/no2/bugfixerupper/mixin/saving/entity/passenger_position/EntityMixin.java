@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.At;
 public abstract class EntityMixin {
 
     @ModifyExpressionValue(
-            method = "saveWithoutId(Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/CompoundTag;",
+            method = "saveWithoutId(Lnet/minecraft/world/level/storage/ValueOutput;)V",
             at = @At(value = "FIELD", target = "Lnet/minecraft/world/entity/Entity;vehicle:Lnet/minecraft/world/entity/Entity;", ordinal = 0)
     )
     private Entity usePassengerPositionForSaving(Entity original) {
