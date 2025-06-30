@@ -1,4 +1,2 @@
-BugFixerUpper _ModVersion_ for Minecraft _MCVersion_ adds a new feature:
+BugFixerUpper _ModVersion_ is the first release for Minecraft _MCVersion_.
 
-## Changes
-- Adapt client side leash fix for new leash system (quad leashes, less bouncy leashes)
