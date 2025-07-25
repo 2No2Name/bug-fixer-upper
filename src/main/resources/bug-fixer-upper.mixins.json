@@ -2,6 +2,7 @@
   "required": true,
   "package": "no2.bugfixerupper.mixin",
   "compatibilityLevel": "JAVA_21",
+  "plugin": "no2.bugfixerupper.BugFixerUpperMixinPlugin",
   "mixins": [
     "chunkload.item_frame_sound.ItemFrameMixin",
     "chunkload.passenger_mount_event.EntityMixin",
