@@ -4,20 +4,24 @@
 
 BugFixerUpper is a Minecraft mod that fixes a few critical and non-critical bugs in the game.
 
+## Configuration
+- All features are enabled by default.
+- You can disable individual features by editing the mod's configuration file located in your Minecraft config folder.
+
 ## Features
-- Whatever you suggest in the issue tracker.
+Feel free to suggest more in the issue tracker! Currently, there are:
+
+### Misc
+- Leads pull on mobs and boats that the player is riding **[Client side]**
+- Ghast balls, wind charges and shulker bullets do not have an extended click box for creative mode players **[Client side]**
+- Curse of vanishing does not apply to items inside donkey/mule/llama chest slots.
+- Save vehicle passengers at their actual position (MC-263030).
+- Parrot mob spawner blocks treat all air types equally (MC-232359).
+- Regenerating exit end portal does not drop torches
 
 ### Chunk loading and generation
 - Prevent passenger entities from sending game events during chunk loading/generation causing deadlocks.
 - Prevent item frames from sending sounds and events during chunk loading/generation.
-
-### Misc
-- Save vehicle passengers at their actual position (MC-263030).
-- Parrot mob spawner blocks treat all air types equally (MC-232359).
-- Curse of vanishing does not apply to items inside donkey/mule/llama chest slots.
-- Leads pull on mobs and boats that the player is riding (Install on client!)
-- Regenerating exit end portal does not drop torches
-- Ghast balls, wind charges and shulker bullets do not have an extended click box for creative mode players (Install on client!)
 
 ### Structure blocks
 - Structure blocks load paintings at the correct position (Thanks to BluSpring) (MC-102223).
