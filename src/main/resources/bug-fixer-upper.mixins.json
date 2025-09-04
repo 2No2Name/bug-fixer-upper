@@ -10,6 +10,7 @@
     "misc.exit_end_portal_torches.EndPodiumFeatureMixin",
     "misc.parrot_mob_spawner.ParrotMixin",
     "misc.vanishing_curse_horse_chest.AbstractHorseMixin",
+    "misc.villager.interdimensional_curing.ZombieVillagerMixin",
     "saving.entity.passenger_position.EntityMixin",
     "structureblocks.hangingentities.StructureTemplateMixin",
     "structureblocks.paintings.StructureTemplateMixin",
