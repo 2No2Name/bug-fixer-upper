@@ -21,7 +21,6 @@ Feel free to suggest more in the issue tracker! Currently, there are:
 - Zombie villager curing improves player reputation when logged out or in different dimension
 
 ### Chunk loading and generation
-- Prevent passenger entities from sending game events during chunk loading/generation causing deadlocks.
 - Prevent item frames from sending sounds and events during chunk loading/generation.
 
 ### Structure blocks
