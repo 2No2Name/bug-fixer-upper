@@ -2,7 +2,7 @@ package no2.bugfixerupper.mixin.misc.parrot_mob_spawner;
 
 import com.llamalad7.mixinextras.injector.ModifyReceiver;
 import net.minecraft.tags.TagKey;
-import net.minecraft.world.entity.animal.Parrot;
+import net.minecraft.world.entity.animal.parrot.Parrot;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
