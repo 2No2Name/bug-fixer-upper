@@ -7,6 +7,7 @@
     "chunkload.item_frame_sound.ItemFrameMixin",
     "misc.exit_end_portal_torches.EndPodiumFeatureMixin",
     "misc.parrot_mob_spawner.ParrotMixin",
+    "misc.shield_projectiles.LivingEntityMixin",
     "misc.vanishing_curse_horse_chest.AbstractHorseMixin",
     "misc.villager.interdimensional_curing.ZombieVillagerMixin",
     "saving.entity.passenger_position.EntityMixin",

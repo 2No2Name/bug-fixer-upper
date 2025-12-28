@@ -19,6 +19,7 @@ Feel free to suggest more in the issue tracker! Currently, there are:
 - Parrot mob spawner blocks treat all air types equally (MC-232359).
 - Regenerating exit end portal does not drop torches
 - Zombie villager curing improves player reputation when logged out or in different dimension
+- Shields block projectiles mostly based on the projectile flight direction instead of their position at impact (MC-279288)
 
 ### Chunk loading and generation
 - Prevent item frames from sending sounds and events during chunk loading/generation.
