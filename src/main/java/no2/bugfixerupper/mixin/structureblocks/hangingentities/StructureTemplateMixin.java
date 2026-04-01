@@ -16,7 +16,7 @@ import static net.minecraft.world.level.block.Rotation.CLOCKWISE_90;
 public class StructureTemplateMixin {
 
     //Fix combined use of rotation + mirror in structure blocks leading to wrong rotation of paintings and item frames
-    @ModifyArg(method = "method_17917", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/Entity;rotate(Lnet/minecraft/world/level/block/Rotation;)F"))
+    @ModifyArg(method = "lambda$placeEntities$0", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/Entity;rotate(Lnet/minecraft/world/level/block/Rotation;)F"))
     private static Rotation fixPaintingPlacement(Rotation rotation, @Local(argsOnly = true) Entity entity, @Local(argsOnly = true) Mirror mirror) {
         if (!(entity instanceof HangingEntity)) {
             return rotation;

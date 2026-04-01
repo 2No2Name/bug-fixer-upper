@@ -1,12 +1,15 @@
 {
   "required": true,
   "package": "no2.bugfixerupper.mixin.client",
-  "compatibilityLevel": "JAVA_21",
+  "compatibilityLevel": "JAVA_25",
   "plugin": "no2.bugfixerupper.BugFixerUpperMixinPlugin",
   "client": [
   ],
   "injectors": {
     "defaultRequire": 1
+  },
+  "mixinextras": {
+    "minVersion": "0.5.3"
   },
   "mixins": [
     "misc.clickable_projectile_size.ProjectileUtilMixin",

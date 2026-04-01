@@ -1,7 +1,7 @@
 {
   "required": true,
   "package": "no2.bugfixerupper.mixin",
-  "compatibilityLevel": "JAVA_21",
+  "compatibilityLevel": "JAVA_25",
   "plugin": "no2.bugfixerupper.BugFixerUpperMixinPlugin",
   "mixins": [
     "chunkload.item_frame_sound.ItemFrameMixin",
@@ -17,5 +17,8 @@
   ],
   "injectors": {
     "defaultRequire": 1
-	}
+  },
+  "mixinextras": {
+    "minVersion": "0.5.3"
+  }
 }

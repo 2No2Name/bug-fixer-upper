@@ -16,32 +16,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup Java
-        run: echo "JAVA_HOME=$JAVA_HOME_21_X64" >> "$GITHUB_ENV"
-
-      - name: Loom Cache
-        uses: actions/cache@v4
-        with:
-          path: "**/.gradle/loom-cache"
-          key: "${{ runner.os }}-gradle-loom-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}"
-          restore-keys: "${{ runner.os }}-gradle-loom-"
-      - name: ModDevGradle Cache
-        uses: actions/cache@v4
-        with:
-          path: "**/.gradle/repositories"
-          key: "${{ runner.os }}-gradle-mdg-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}"
-          restore-keys: "${{ runner.os }}-gradle-mdg-"
+        run: echo "JAVA_HOME=$JAVA_HOME_25_X64" >> "$GITHUB_ENV"
 
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v4
+        uses: gradle/actions/setup-gradle@v5
         with:
           gradle-home-cache-cleanup: true
           cache-read-only: true
 
       - name: Validate Gradle Wrapper Integrity
-        uses: gradle/wrapper-validation-action@v2
+        uses: gradle/actions/wrapper-validation@v5
 
       - name: make gradle wrapper executable
         run: chmod +x ./gradlew

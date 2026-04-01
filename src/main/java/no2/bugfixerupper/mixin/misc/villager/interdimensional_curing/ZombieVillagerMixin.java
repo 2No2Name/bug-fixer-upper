@@ -17,7 +17,7 @@ import java.util.UUID;
 public class ZombieVillagerMixin {
 
     @WrapOperation(
-            method = "method_63659",
+            method = "lambda$finishConversion$0",
             at = @At(value = "INVOKE", target = "Lnet/minecraft/server/level/ServerLevel;getPlayerByUUID(Ljava/util/UUID;)Lnet/minecraft/world/entity/player/Player;")
     )
     private Player getPlayerInAllWorlds(ServerLevel instance, UUID uuid, Operation<Player> original, @Local(argsOnly = true) Villager villager) {
