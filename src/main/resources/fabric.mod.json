@@ -30,6 +30,6 @@
 		}
 	],
 	"depends": {
-
+		"fabricloader": ">=0.19.1"
 	}
 }
