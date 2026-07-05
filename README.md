@@ -24,6 +24,9 @@ Feel free to suggest more in the issue tracker! Currently, there are:
 ### Chunk loading and generation
 - Prevent item frames from sending sounds and events during chunk loading/generation.
 
+### VoxelShapes
+- Initialize VoxelShape slices correctly, possibly correcting some occlusion and shape face checks
+
 ### Structure blocks
 - Structure blocks load paintings at the correct position (Thanks to BluSpring) (MC-102223).
 - Structure blocks with combined mirror and rotation place paintings and item frames with the correct rotation.

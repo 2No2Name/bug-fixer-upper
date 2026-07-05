@@ -11,6 +11,7 @@
     "misc.vanishing_curse_horse_chest.AbstractHorseMixin",
     "misc.villager.interdimensional_curing.ZombieVillagerMixin",
     "saving.entity.passenger_position.EntityMixin",
+    "shapes.slice.SliceShapeMixin",
     "structureblocks.hangingentities.StructureTemplateMixin",
     "structureblocks.paintings.StructureTemplateMixin",
     "tickfreeze.passengerfreeze.ServerLevelMixin"
