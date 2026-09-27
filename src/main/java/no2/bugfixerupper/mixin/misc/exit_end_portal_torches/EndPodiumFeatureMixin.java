@@ -6,8 +6,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.LevelWriter;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.EndPodiumFeature;
-import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
-import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
@@ -22,7 +20,7 @@ public class EndPodiumFeatureMixin {
                     ordinal = 2
             )
     )
-    private boolean placeIfNoTorchesHanging(EndPodiumFeature instance, LevelWriter levelWriter, BlockPos blockPos, BlockState blockState, @Local(argsOnly = true) FeaturePlaceContext<NoneFeatureConfiguration> featurePlaceContext) {
-        return !blockPos.equals(featurePlaceContext.origin().above(2));
+    private boolean placeIfNoTorchesHanging(EndPodiumFeature instance, LevelWriter levelWriter, BlockPos blockPos, BlockState blockState, @Local(argsOnly = true, name = "origin") BlockPos origin) {
+        return !blockPos.equals(origin.above(2));
     }
 }
