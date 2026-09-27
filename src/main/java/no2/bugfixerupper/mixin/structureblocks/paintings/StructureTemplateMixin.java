@@ -54,7 +54,7 @@ public class StructureTemplateMixin {
         }
 
         if (changed) {
-            painting.setPos(pos.getCenter());
+            painting.setPos(Vec3.atCenterOf(pos));
         }
     }
 }

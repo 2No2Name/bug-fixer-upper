@@ -1,7 +1,5 @@
 package no2.bugfixerupper.mixin.client.misc.leashed_player_vehicle;
 
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.Leashable;
 import net.minecraft.world.level.Level;
@@ -16,10 +14,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class EntityMixin {
 
     @Shadow public abstract Level level();
-
-    @Shadow public abstract float distanceTo(Entity entity);
-
-    @Shadow public abstract boolean onGround();
 
     @Shadow public abstract boolean isLocalInstanceAuthoritative();
 
